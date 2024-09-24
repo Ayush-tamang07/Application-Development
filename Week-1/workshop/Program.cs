@@ -3,9 +3,7 @@ using System;
 using System.Runtime.CompilerServices;
 class Program
 {
-    static string[] names = ["Alice", "Bob", "Charlie", "Diana", "Eve"];
-
-
+    // static string[] names = ["Alice", "Bob", "Charlie", "Diana", "Eve"];
     static void Main(string[] args)
     {
         // Console.WriteLine("Hello World");
@@ -40,13 +38,21 @@ class Program
         // var sum = num1+num2;
         // Console.WriteLine("\nSum:"+ sum );
 
+        // using Array and foreach loop
+        // Console.WriteLine("Name of peoples:");
 
-        Console.WriteLine("Name of peoples:");
+        // foreach (string name in names)
+        // {
+        //     Console.WriteLine(name);
+        // }
+        int[][] jaggedArray = new int[3][];
 
-        foreach (string name in names)
-        {
-            Console.WriteLine(name);
-        }
+        jaggedArray[0] =new int[]{1,2};
+        jaggedArray[1] =new int[]{3,4,5};
+        jaggedArray[2] =new int[]{6,7,8,9};
+
+        Console.WriteLine(jaggedArray[2][3]);
+
     }
 }
 
