@@ -1,7 +1,11 @@
 ﻿// Using System
 using System;
+using System.Runtime.CompilerServices;
 class Program
 {
+    static string[] names = ["Alice", "Bob", "Charlie", "Diana", "Eve"];
+
+
     static void Main(string[] args)
     {
         // Console.WriteLine("Hello World");
@@ -36,11 +40,13 @@ class Program
         // var sum = num1+num2;
         // Console.WriteLine("\nSum:"+ sum );
 
-        
 
+        Console.WriteLine("Name of peoples:");
 
-
-
+        foreach (string name in names)
+        {
+            Console.WriteLine(name);
+        }
     }
 }
 

@@ -12,3 +12,4 @@ D:\year 3\first semester\Application Development\Code\Week-1\workshop\obj\Debug\
 D:\year 3\first semester\Application Development\Code\Week-1\workshop\obj\Debug\net8.0\workshop.pdb
 D:\year 3\first semester\Application Development\Code\Week-1\workshop\obj\Debug\net8.0\workshop.genruntimeconfig.cache
 D:\year 3\first semester\Application Development\Code\Week-1\workshop\obj\Debug\net8.0\ref\workshop.dll
+D:\year 3\first semester\Application Development\Code\Week-1\workshop\obj\Debug\net8.0\workshop.sourcelink.json
