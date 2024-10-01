@@ -7,8 +7,13 @@ class Program
         //    inc();
         // Password();
         // BranchingWithTheSwitchStatement();
-        ExceptionHandling();
-
+        // ExceptionHandling();
+        // BtwiseAndBinaryShiftOperators();
+        // calculator();
+        Check();
+    }
+    static void BtwiseAndBinaryShiftOperators()
+    {
         // bitwise and binary shift operators
         // var a = 10;
         // var b = 6;
@@ -19,8 +24,10 @@ class Program
 
         // Console.WriteLine(a<<3);
         // Console.WriteLine(b>>1);
+    }
 
-
+    static void calculator()
+    {
         //<------------------simple calculator------------------>
 
         // double num1, num2;
@@ -57,8 +64,6 @@ class Program
         //         break;
         // }
         //<------------------simple calculator------------------>
-
-
     }
 
     static void inc()
@@ -126,18 +131,41 @@ class Program
         Console.WriteLine("Some statements...");
 
     }
-    
-    static void ExceptionHandling(){
+
+    static void ExceptionHandling()
+    {
         Console.Write("Enter an amount: ");
         String? amount = Console.ReadLine();
-        try{
+        try
+        {
             var amountValue = decimal.Parse(amount);
         }
-        catch(FormatException) when (amount.Contains("$")){
+        catch (FormatException) when (amount.Contains("$"))
+        {
             Console.WriteLine("Amount cannot use the dollar sign!");
         }
-        catch(FormatException){
+        catch (FormatException)
+        {
             Console.WriteLine("Amounts must only contain digits!");
+        }
+    }
+
+    static void Check(){
+        try{
+            checked{
+                int x = int.MaxValue -1;
+                Console.WriteLine($"Initial value: {x}");
+                x++;
+                Console.WriteLine($"After Incrementing: {x}");
+                x++;
+                Console.WriteLine($"After Incrementing: {x}");
+                x++;
+                Console.WriteLine($"After Incrementing: {x}");
+            }
+        }
+        catch(OverflowException){
+            
+            Console.WriteLine("The code is overflowed!");
         }
     }
 }
