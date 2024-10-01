@@ -5,9 +5,9 @@ class Program
     static void Main(string[] args)
     {
         //    inc();
-        Password();
+        // Password();
         // BranchingWithTheSwitchStatement();
-
+        ExceptionHandling();
 
         // bitwise and binary shift operators
         // var a = 10;
@@ -125,6 +125,20 @@ class Program
     MyLabel:
         Console.WriteLine("Some statements...");
 
+    }
+    
+    static void ExceptionHandling(){
+        Console.Write("Enter an amount: ");
+        String? amount = Console.ReadLine();
+        try{
+            var amountValue = decimal.Parse(amount);
+        }
+        catch(FormatException) when (amount.Contains("$")){
+            Console.WriteLine("Amount cannot use the dollar sign!");
+        }
+        catch(FormatException){
+            Console.WriteLine("Amounts must only contain digits!");
+        }
     }
 }
 
