@@ -29,15 +29,54 @@ class Program
 
 
         // bitwise and binary shift operators
-        var a = 10;
-        var b = 6;
+        // var a = 10;
+        // var b = 6;
 
-        Console.WriteLine(a & b);
-        Console.WriteLine(a | b);
-        Console.WriteLine(a ^ b);
+        // Console.WriteLine(a & b);
+        // Console.WriteLine(a | b);
+        // Console.WriteLine(a ^ b);
 
-        Console.WriteLine(a<<3);
-        Console.WriteLine(b>>1);
+        // Console.WriteLine(a<<3);
+        // Console.WriteLine(b>>1);
+
+
+        //<------------------simple calculator------------------>
+
+        double num1, num2;
+        string operation;
+
+        Console.WriteLine("Simple calculator in C#");
+        
+        // get the number from the user
+        Console.Write("Enter the first number: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+
+        // get the second number from the user
+        Console.Write("Enter the second number: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+        
+        // get the operation from the user
+        Console.WriteLine("Choose an operation: +,-,*,/ ");
+        operation = Console.ReadLine();
+
+
+        // perform the calculation based on the operation
+        switch (operation){
+            case "+":
+                Console.WriteLine($"Result: {num1} + {num2} = {num1+num2}");
+                break;
+            case "-":
+                Console.WriteLine($"Result: {num1} - {num2} = {num1-num2}");
+                break;
+            case "*":
+                Console.WriteLine($"Result: {num1} * {num2} = {num1*num2}");
+                break;
+            case "/":
+                Console.WriteLine($"Result: {num1} / {num2} = {num1/num2}");
+                break;
+        }
+        //<------------------simple calculator------------------>
+
 
     }
 
