@@ -10,7 +10,8 @@ class Program
         // ExceptionHandling();
         // BtwiseAndBinaryShiftOperators();
         // calculator();
-        Check();
+        // Check();
+        UnCheck();
     }
     static void BtwiseAndBinaryShiftOperators()
     {
@@ -150,10 +151,13 @@ class Program
         }
     }
 
-    static void Check(){
-        try{
-            checked{
-                int x = int.MaxValue -1;
+    static void Check()
+    {
+        try
+        {
+            checked
+            {
+                int x = int.MaxValue - 1;
                 Console.WriteLine($"Initial value: {x}");
                 x++;
                 Console.WriteLine($"After Incrementing: {x}");
@@ -163,10 +167,25 @@ class Program
                 Console.WriteLine($"After Incrementing: {x}");
             }
         }
-        catch(OverflowException){
-            
+        catch (OverflowException)
+        {
+
             Console.WriteLine("The code is overflowed!");
         }
+    }
+
+    static void UnCheck()
+    {
+        unchecked
+        {
+            int y = int.MaxValue + 1; // without unchecked, it won't compile
+            Console.WriteLine($"Initial value: {y}"); // => -2,147,483,648
+            y--;
+            Console.WriteLine($"After decrementing: {y}"); // => 2,147,483,647
+            y--;
+            Console.WriteLine($"After decrementing: {y}"); // => 2,147,483,646
+        }
+
     }
 }
 
