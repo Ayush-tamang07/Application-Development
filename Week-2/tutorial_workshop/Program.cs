@@ -27,6 +27,18 @@ class Program
         // Console.WriteLine(preDecrement);
         // Console.WriteLine(x);
 
+
+        // bitwise and binary shift operators
+        var a = 10;
+        var b = 6;
+
+        Console.WriteLine(a & b);
+        Console.WriteLine(a | b);
+        Console.WriteLine(a ^ b);
+
+        Console.WriteLine(a<<3);
+        Console.WriteLine(b>>1);
+
     }
 
 }
