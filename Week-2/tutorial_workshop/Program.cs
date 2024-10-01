@@ -4,28 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Unary operators
-        // var x = 5;
-
-        // Console.WriteLine("post increment:");
-        // int postIncrement = x++;
-        // Console.WriteLine(postIncrement);
-        // Console.WriteLine(x);
-
-        // Console.WriteLine("pre increment:");
-        // int preIncrement = ++x;
-        // Console.WriteLine(preIncrement);
-        // Console.WriteLine(x);
-
-        // Console.WriteLine("post decrement:");
-        // int postDecrement = x--;
-        // Console.WriteLine(postDecrement);
-        // Console.WriteLine(x);
-
-        // Console.WriteLine("pre decrement:");
-        // int preDecrement = --x;
-        // Console.WriteLine(preDecrement);
-        // Console.WriteLine(x);
+        //    inc();
+        Password();
+        // BranchingWithTheSwitchStatement();
 
 
         // bitwise and binary shift operators
@@ -77,8 +58,50 @@ class Program
         // }
         //<------------------simple calculator------------------>
 
+
+    }
+
+    static void inc()
+    {
+        // Unary operators
+        // var x = 5;
+
+        // Console.WriteLine("post increment:");
+        // int postIncrement = x++;
+        // Console.WriteLine(postIncrement);
+        // Console.WriteLine(x);
+
+        // Console.WriteLine("pre increment:");
+        // int preIncrement = ++x;
+        // Console.WriteLine(preIncrement);
+        // Console.WriteLine(x);
+
+        // Console.WriteLine("post decrement:");
+        // int postDecrement = x--;
+        // Console.WriteLine(postDecrement);
+        // Console.WriteLine(x);
+
+        // Console.WriteLine("pre decrement:");
+        // int preDecrement = --x;
+        // Console.WriteLine(preDecrement);
+        // Console.WriteLine(x);
+    }
+    static void Password()
+    {
+        string? password;
+        do
+        {
+            Console.Write("Enter your password: ");
+            password = Console.ReadLine();
+        }
+        while (password != "SecretPassword");
+        Console.WriteLine("Welcome");
+    }
+
+    static void BranchingWithTheSwitchStatement()
+    {
         //<------------------Branching with the switch statement------------------>
-        var number = (new Random().Next(1, 5));
+        var number = 1;
         string message;
 
         switch (number)
@@ -96,12 +119,12 @@ class Program
                 message = "three";
                 break;
         }
+    LastLabel:
+        Console.WriteLine($"The message is {message}.");
+
     MyLabel:
         Console.WriteLine("Some statements...");
 
-    LastLabel:
-        Console.WriteLine($"The message is {message}.");
     }
-
 }
 
